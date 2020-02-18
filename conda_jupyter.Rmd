@@ -1,0 +1,92 @@
+---
+title: "Conda and Jupyter Notes"
+author: "James Holste"
+date: "2/17/2020"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts] 
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+library(tidyverse)
+```
+
+# Table of Contents
+1. [Conda] (#conda)
+  a. [About]
+  b. [Installation]
+2. [Jupyter Notebook] (jupyter)
+  
+
+---
+class: inverse, center, middle
+name: conda
+
+## Conda
+
+- Conda is an open source package and environment management system
+- Enables you to quickly run, update, and install packages
+- Designed for Python but can package and distribute for  a host of other languages
+-
+
+---
+
+### Requirements
+
+- Requires you to download Anaconda and Python 
+
+---
+
+# Jupyter Notebook
+
+### What is it?
+
+Jupyter Notebook allows you to create and share live documents that contain code, visualizations, equations, and narrative text. Think like google drive but with the ability to share live coded documents
+
+### Downloading
+
+You can use Conda to download
+```{}
+conda install -c conda-forge notebook
+```
+
+---
+
+## Update your packages with conda update
+
+Or update all of them with r-caret
+
+```{}
+conda update r-caret
+```
+
+## Create a New Environment 
+
+```{}
+conda create -n r-environment r-essentials r-base
+conda activate r-environment
+```
+---
+## Using R in Jupiter Notebook
+
+1. Open Anaconda Navigator (it was installed with Anaconda)
+2. Install R language and r-essential packages by selecting ***Environments*** and then ***Create***. Make sure both the ***Python*** and ***R*** boxes are selected and then select ***r*** from the drop down menu.
+3. Now open the newly created environment with Jupyter Notebook.
+4. Then create a new R notebook by selecting ***R*** in the ***New** drop down menu.
+5. This new file can run code similar to an R script but now contained in this new environment
+
+# Resources
+
+Download Python:https://www.python.org/downloads/
+Download Anaconda:https://www.anaconda.com/distribution/
+Conda User Guide: https://conda.io/projects/conda/en/latest/user-guide/index.html 
+Jupyter Notebook Tutorial:https://www.dataquest.io/blog/jupyter-notebook-tutorial/
+R in Jupyter Notebook:https://docs.anaconda.com/anaconda/navigator/tutorials/r-lang/
+Anaconda and Python Comparison:https://sciencing.com/differences-between-boa-python-anaconda-8351539.html
