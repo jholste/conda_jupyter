@@ -63,10 +63,18 @@ conda install -c conda-forge notebook
 ---
 
 ## Update your packages with conda update
-### Or update all of them with r-caret
+
+Or update all of them with r-caret
 
 ```{}
 conda update r-caret
+```
+
+## Create a New Environment 
+
+```{}
+conda create -n r-environment r-essentials r-base
+conda activate r-environment
 ```
 ---
 ## Using R in Jupiter Notebook
@@ -77,6 +85,43 @@ conda update r-caret
 4. Then create a new R notebook by selecting ***R*** in the ***New** drop down menu.
 5. This new file can run code similar to an R script but now contained in this new environment
 
+---
+
+## Using Jupyter
+
+Two major terms:
+
+- Kernel: computational engine that executes code in the journal (Such as Python, C++, R, etc.)
+- Cell: a container of text or code to be executed
+
+In a sense a notebook file is akin to a script file
+
+---
+## Using a Notebook-Check Points
+
+Everytime you save your document a new checkpoint file is created
+
+This checkpoint will be located within a hidden subdirectory: ***.ipynb_checkpoints***
+
+Hence you can restore back to a previously saved version in case of an incident (note: Jupyter Note autosaves every 120 seconds)
+---
+# Sharing and Exporting
+
+### Preping the Notebook
+
+1. Click "Cell&gt;All Output&gt;Clear" (Clears Output)
+2. Click "Kernal&gt;Restart &amp; Run All" (Reruns Notebook)
+3. Check that all cells execute
+
+- These steps are not required but are best practice to ensure there exists no intermediate output or have a stale state.
+
+### Exporting to Github using Gists
+
+1. Sign in and browse to gist.github.com.
+2. Open your .ipynb file in a text editor, select all and copy the JSON inside.
+3. Paste the notebook JSON into the gist.
+4. Give your Gist a filename (remember to add .iypnb or this will not work)
+5. Click either “Create secret gist” or “Create public gist.”
 # Resources
 
 Download Python:https://www.python.org/downloads/
